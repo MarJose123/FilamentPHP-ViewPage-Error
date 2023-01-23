@@ -24,6 +24,16 @@ class TestingResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')->required(),
+                Forms\Components\Section::make('Other Details')
+                ->schema([
+                    Forms\Components\DateTimePicker::make('created_at')
+                        ->visibleOn(Pages\ViewTesting::class),
+                    Forms\Components\DateTimePicker::make('updated_at')
+                        ->visibleOn(Pages\ViewTesting::class),
+                ])
+                ->columns(2)
+                ->visibleOn(Pages\ViewTesting::class),
+                Forms\Components\KeyValue::make('header')
             ]);
     }
 

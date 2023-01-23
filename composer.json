@@ -6,14 +6,20 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "bezhansalleh/filament-exceptions": "dev-main",
         "doctrine/dbal": "^3.3",
         "filament/filament": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "laravolt/avatar": "^4.1",
+        "marjose123/filament-lockscreen": "*",
+        "marjose123/filament-no-connection": "*",
+        "marjose123/filament-webhook-server": "dev-feat_history-log"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.7",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
@@ -49,6 +55,18 @@
             "@php artisan key:generate --ansi"
         ]
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../self_project/filament-lockscreen"
+        },{
+            "type": "path",
+            "url": "../../self_project/filament-no-connection"
+        },{
+            "type": "path",
+            "url": "../../self_project/filament-webhook-server"
+        }
+    ],
     "extra": {
         "laravel": {
             "dont-discover": []
